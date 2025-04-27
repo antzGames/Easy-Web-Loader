@@ -3,11 +3,11 @@
 Easy HTML Web Loader for Godot is a very simple plugin used for your web builds
 which allows you to customize your HTML loading screen, with only 2 images.  Here are some highlights:
 	
-	- includes a custom HTML shell template.
-	- forces user to click the so that browser is allowed to enable audio and full screen.
-	- loading screen and progress bar show loading progress,
-	- progress bar color can be modified in included custom HTML shell template.
-	- use you own images to customize the HTML loading process.
+- includes a custom HTML shell template.
+- forces user to click the so that browser is allowed to enable audio and full screen.
+- loading screen and progress bar show loading progress,
+- progress bar color can be modified in included custom HTML shell template.
+- use you own images to customize the HTML loading process.
 
 ## Audience
 
@@ -66,32 +66,28 @@ using an external editor.
 You can change the background color of the loading screen, modify this section in 
 the Custom HTML Shell:
 	
-	```html
-
-	<style>
-		body {
-			touch-action: none;
-			margin: 0;
-			border: 0 none;
-			padding: 0;
-			text-align: center;
-			background-color: black;  /* change background color */
-		}
-	
-	```
+```html
+<style>
+	body {
+		touch-action: none;
+		margin: 0;
+		border: 0 none;
+		padding: 0;
+		text-align: center;
+		background-color: black;  /* change background color */
+	}
+```
 ### Progress Bar color
 
 You can change the background color of the progress, modify this section in 
 the Custom HTML Shell:
 	
-	```html
-	
-		/* change the built in browser progress color */
-		progress {
-			accent-color: #e44033
-		}
-	
-	```
+```html
+	/* change the built in browser progress color */
+	progress {
+		accent-color: #e44033
+	}
+```
 
 ## Demo
 
