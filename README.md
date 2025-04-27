@@ -34,7 +34,7 @@ If you need help in exporting your game to the web, see the official Godot [Expo
 
 ## Video
 
-If you hate reading and would rather watch a video on how to install and configure this plugin, click here.
+If you hate reading and would rather watch a video on how to install and configure this plugin, watch on [YouTube](https://youtu.be/3ZJT7RDXMqU).
 
 ## Installation
 
