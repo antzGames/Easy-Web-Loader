@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5pbye12tyly2"
-path="res://.godot/imported/clickme.png-b3e02e84ca6f9227c79d8300e0869c8b.ctex"
+uid="uid://degqoxu5mqqlc"
+path="res://.godot/imported/loading.png-74e5d2dbf721774c72e4272f662c1a44.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/easy_web_loader/html/clickme.png"
-dest_files=["res://.godot/imported/clickme.png-b3e02e84ca6f9227c79d8300e0869c8b.ctex"]
+source_file="res://demo/images/loading.png"
+dest_files=["res://.godot/imported/loading.png-74e5d2dbf721774c72e4272f662c1a44.ctex"]
 
 [params]
 
