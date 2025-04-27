@@ -12,20 +12,24 @@ which allows you to customize your HTML loading screen, with only 2 images.  Her
 ## Audience
 
 This plugin is for developers who are familiar with exporting thier projects to the Web.
-If you need help in exporting you Godot game to the web, see: https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_web.html
+If you need help in exporting your game to the web, see the official Godot [Exporting for Web](https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_web.html) documentation.
 
 ## Limitations
 
 - only single thread exports supported.
-- your custom images are recommened to be 1280x720.
 - you custom images have to be PNG format.
+- your custom images are recommened to be 1280x720 or smaller.
+
+## Video
+
+If you hate reading and rather watch a video on how to install and configure this plugin, click here.
 
 ## Installation
 
 - Download this repository as a ZIP file.
 - Extract the ZIP file.
 - Copy the 'addons' directory from the extracted ZIP file into your Godot project's 'res://' filesystem.
-- Go to 'Project > Project Settings > Plugins' and enable
+- Go to 'Project > Project Settings > Plugins' and enable.
 
 ## Setting up Web Export
 
