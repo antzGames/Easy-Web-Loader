@@ -28,29 +28,31 @@ If you hate reading and rather watch a video on how to install and configure thi
 
 - Download this repository as a ZIP file.
 - Extract the ZIP file.
-- Copy the 'addons' directory from the extracted ZIP file into your Godot project's 'res://' filesystem.
-- Go to 'Project > Project Settings > Plugins' and enable.
+- Copy the `addons` directory from the extracted ZIP file into your Godot project's `res://` filesystem.
+- Go to `Project > Project Settings > Plugins` and enable.
+
+<img src="https://github.com/antzGames/Easy-Web-Loader/blob/main/demo/images/install_plugin.jpg" width="50%" height="50%">
 
 ## Setting up Web Export
 
-- Go to 'Project > Export'
+- Go to `Project > Export`
 - Add the Web template to the presets.
-- In the Custom HTML Shell field, add 'res://addons/easy_web_loader/html/index_template.html'
+- In the Custom HTML Shell field, add `res://addons/easy_web_loader/html/index_template.html`
 - Export. 
 
 ## Adding your images
 
 There are two PNG images that you need to have ready.  Both are recommended to be 1280x720.
 
-- The first image needs to be renamed 'clickme.png' in lower case.
-- The second image needs to be renamed 'loading.png' in lower case.
+- The first image needs to be renamed `clickme.png` in lower case.
+- The second image needs to be renamed `loading.png` in lower case.
 
-The 'clickme.png' needs to have a message on it requesting the user to click the image.
+The `clickme.png` needs to have a message on it requesting the user to click the image.
 This user click is important as it allows the browser to now play audio and allow
 fullscreen mode.
 
-Once the user has clicked the 'clickme.png' image, then the image is swapped to the
-'loading.png' image and the progress bar is now shown.  To change the progress bar color see the next section.
+Once the user has clicked the `clickme.png` image, then the image is swapped to the
+`loading.png` image and the progress bar is now shown.  To change the progress bar color see the next section.
 
 Once the loading of the game happens, the Godot Engine will start running your game.
 
@@ -60,7 +62,7 @@ This section is slightly advance as it requires you to modify the included
 Custom HTML Shell.  If you mess up, dont worry, just re-install this plugin and
 you are back to where you started.
 
-The Custom HTML Shell is located here: 'res://addons/easy_web_loader/html/index_template.html'
+The Custom HTML Shell is located here: `res://addons/easy_web_loader/html/index_template.html`
 
 The Godot editor hides HTML files for some reason so you need to edit this file
 using an external editor.
