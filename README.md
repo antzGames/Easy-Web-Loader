@@ -5,8 +5,8 @@ which allows you to customize your HTML loading screen, with only 2 images.  Her
 	
 - includes a custom HTML shell template.
 - forces user to click the so that browser is allowed to enable audio and full screen.
-- loading screen and progress bar show loading progress,
-- progress bar color can be modified in included custom HTML shell template.
+- loading screen and progress bar show loading progress.
+- progress bar color, and loading screen background color can be modified in the included custom HTML shell template.
 - use you own images to customize the HTML loading process.
 
 ## Audience
