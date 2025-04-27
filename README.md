@@ -105,7 +105,7 @@ the Custom HTML Shell:
 ```
 ### Progress Bar color
 
-You can change the `accent-color` of the progress, modify this section in 
+You can change the `accent-color` of the progress bar, modify this section in 
 the Custom HTML Shell:
 	
 ```html
