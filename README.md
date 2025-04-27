@@ -1,4 +1,4 @@
-# Easy Web Loader for Godot 4.3+
+# Easy Web Loader for Godot
 
 Easy HTML Web Loader for Godot is a very simple plugin used for your web builds
 which allows you to customize your HTML loading screen, with only 2 images.  Here are some highlights:
