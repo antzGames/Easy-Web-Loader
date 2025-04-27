@@ -11,9 +11,7 @@ which allows you to customize your HTML loading screen, with only 2 images.  Her
 
 ## Why is a plugin needed?
 
-Godot by default will export all assets (including images) into the PCK file, and will not be avaiable to HTML using a simple <img> tag.
-So how do you add custom images to support a custom html shell?  Well you need to copy the images over AFTER export.  A lot of custom 
-Godot placeholder variables are processed in the custom html shell which further complicates the simple use case of custom loader images.
+Godot by default will export all assets (including images) into the a PCK file.  Therefore your images will not be avaiable to HTML using a simple <img> tag. So how do you add custom images to support a custom html shell?  Well you need to copy the loader images over AFTER export.  A lot of custom Godot placeholder variables are processed in the custom html shell which further complicates the simple use case of custom loader images.
 
 This plugin makes this whole process easy and simple.  All you need to provide is 2 custom loader images and the plugin handles the copying over of the files and the processing of the provided custom html template.
 
