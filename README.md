@@ -11,9 +11,13 @@ which allows you to customize your HTML loading screen, with only 2 images.  Her
 
 ## Why is a plugin needed?
 
-Godot by default will export all assets (including images) into the a PCK file.  Therefore your images will not be avaiable to HTML using a simple <img> tag. So how do you add custom images to support a custom html shell?  Well you need to copy the loader images over AFTER export.  A lot of custom Godot placeholder variables are processed in the custom html shell which further complicates the simple use case of custom loader images.
+Godot by default will export all assets (including images) into the a PCK file.  Therefore your images will not be avaiable to HTML using a simple `<img>` tag.
+
+So how do you add custom images to support a custom html shell?  Well you need to copy the loader images over AFTER export.  A lot of custom Godot placeholder variables are processed in the custom html shell which further complicates the simple use case of custom loader images.
 
 This plugin makes this whole process easy and simple.  All you need to provide is 2 custom loader images and the plugin handles the copying over of the files and the processing of the provided custom html template.
+
+In addition the plugin solution solves the issue of getting the user to click the initial loading screen so that the browser has the ability to play audio and go fullscreen.
 
 ## Audience
 
@@ -26,6 +30,7 @@ If you need help in exporting your game to the web, see the official Godot [Expo
 - only `Export Project` option supported (no PCK/ZIP)
 - you custom images have to be PNG format.
 - your custom images are recommened to be 1280x720 or smaller.
+- This is initial release, and it was built for my own game jams. If you find bugs please open an issue.
 
 ## Video
 
@@ -84,7 +89,7 @@ using an external editor.
 
 ### Loading Screen backgroud color
 
-You can change the background color of the loading screen, modify this section in 
+You can change the `background-color` of the loading screen, modify this section in 
 the Custom HTML Shell:
 	
 ```html
@@ -100,7 +105,7 @@ the Custom HTML Shell:
 ```
 ### Progress Bar color
 
-You can change the background color of the progress, modify this section in 
+You can change the `accent-color` of the progress, modify this section in 
 the Custom HTML Shell:
 	
 ```html
