@@ -4,44 +4,44 @@ Easy HTML Web Loader for Godot is a very simple plugin used for your web builds
 which allows you to customize your HTML loading screen, with only 2 images.  Here are some highlights:
 	
 - includes a custom HTML shell template.
-- forces user to click the so that browser is allowed to enable audio and full screen.
+- forces the user to click so that the browser is allowed to enable audio and fullscreen.
 - loading screen and progress bar show loading progress.
 - progress bar color, and loading screen background color can be modified in the included custom HTML shell template.
-- use you own images to customize the HTML loading process.
+- use your own images to customize the HTML loading process.
 
 ## Why is a plugin needed?
 
-Godot by default will export all assets (including images) into the a PCK file.  Therefore your images will not be avaiable to HTML using a simple `<img>` tag.
+By default, Godot exports all assets (including images) into a PCK file.  Therefore, your images will not be available to HTML using a simple `<img>` tag.
 
-So how do you add custom images to support a custom html shell?  Well you need to copy the loader images over AFTER export.  A lot of custom Godot placeholder variables are processed in the custom html shell which further complicates the simple use case of custom loader images.
+So how do you add custom images to support a custom html shell?  Well you need to copy the loader images over AFTER export. Many custom Godot placeholder variables are processed in the custom HTML shell, which further complicates the simple use case of custom loader images.
 
 This plugin makes this whole process easy and simple.  All you need to provide is 2 custom loader images and the plugin handles the copying over of the files and the processing of the provided custom html template.
 
-In addition the plugin solution solves the issue of getting the user to click the initial loading screen so that the browser has the ability to play audio and go fullscreen.
+In addition, the plugin solves the issue of getting the user to click the initial loading screen so that the browser has the ability to play audio and go fullscreen.
 
 ## Audience
 
-This plugin is for developers who are familiar with exporting thier projects to the Web.
+This plugin is for developers who are familiar with exporting their projects to the web.
 If you need help in exporting your game to the web, see the official Godot [Exporting for Web](https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_web.html) documentation.
 
 ## Limitations
 
-- only single thread exports supported.
+- only single-threaded exports are supported.
 - only `Export Project` option supported (no PCK/ZIP)
-- you custom images have to be PNG format.
-- your custom images are recommened to be 1280x720 or smaller.
-- This is initial release, and it was built for my own game jams. If you find bugs please open an issue.
+- your custom images must be in PNG format.
+- your custom images are recommended to be 1280×720 or smaller.
+- This is the initial release, and it was built for my own game jams. If you find bugs please open an issue.
 
 ## Video
 
-If you hate reading and rather watch a video on how to install and configure this plugin, click here.
+IIf you hate reading and would rather watch a video on how to install and configure this plugin, click here.
 
 ## Installation
 
 - Download this repository as a ZIP file.
 - Extract the ZIP file.
 - Copy the `addons` directory from the extracted ZIP file into your Godot project's `res://` filesystem.
-- Go to `Project > Project Settings > Plugins` and enable.
+- Go to `Project > Project Settings > Plugins` and enable the plugin.
 
 <img src="https://github.com/antzGames/Easy-Web-Loader/blob/main/demo/images/install_plugin.jpg" width="50%" height="50%">
 
@@ -56,7 +56,7 @@ If you hate reading and rather watch a video on how to install and configure thi
 
 ## Adding your images
 
-There are two PNG images that you need to have ready.  Both are recommended to be 1280x720 or smaller.
+There are two PNG images that you need to prepare.  Both are recommended to be 1280x720 or smaller.
 
 - The first image needs to be renamed `clickme.png` in lower case.
 - The second image needs to be renamed `loading.png` in lower case.
@@ -78,8 +78,8 @@ Replace the `clickme.png` and `loading.png` in the `res://addons/easy_web_loader
 
 ## Modifying colors
 
-This section is slightly advance as it requires you to modify the included 
-Custom HTML Shell.  If you mess up, dont worry, just re-install this plugin and
+This section is slightly advanced as it requires you to modify the included 
+Custom HTML Shell.  If you mess up, don't worry, just re-install this plugin and
 you are back to where you started.
 
 The Custom HTML Shell is located here: `res://addons/easy_web_loader/html/index_template.html`
@@ -117,8 +117,7 @@ the Custom HTML Shell:
 
 ## Demo
 
-I have included a Demo scene in this repository.  It is used to test if 
-everything works.
+A demo scene is included in this repository to test if everything works.
 
 ## License
 
