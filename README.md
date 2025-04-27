@@ -1,7 +1,7 @@
 # Easy Web Loader for Godot
 
 Easy HTML Web Loader for Godot is a very simple plugin used for your web builds
-which allows you to customize your HTML loading screen, with only 2 images.  Here are some highlights:
+which allows you to customize your HTML loading screen, with only 2 images. Here are some highlights:
 	
 - includes a custom HTML shell template.
 - forces the user to click so that the browser is allowed to enable audio and fullscreen.
@@ -11,11 +11,11 @@ which allows you to customize your HTML loading screen, with only 2 images.  Her
 
 ## Why is a plugin needed?
 
-By default, Godot exports all assets (including images) into a PCK file.  Therefore, your images will not be available to HTML using a simple `<img>` tag.
+By default, Godot exports all assets (including images) into a PCK file. Therefore, your images will not be available to HTML using a simple `<img>` tag.
 
-So how do you add custom images to support a custom html shell?  Well you need to copy the loader images over AFTER export. Many custom Godot placeholder variables are processed in the custom HTML shell, which further complicates the simple use case of custom loader images.
+So how do you add custom images to support a custom HTML shell? Well you need to copy the loader images over AFTER export. Many custom Godot placeholder variables are processed in the custom HTML shell, which further complicates the simple use case of custom loader images.
 
-This plugin makes this whole process easy and simple.  All you need to provide is 2 custom loader images and the plugin handles the copying over of the files and the processing of the provided custom html template.
+This plugin makes this whole process easy and simple. All you need to provide is 2 custom loader images and the plugin handles the copying over of the files and the processing of the provided custom HTML template.
 
 In addition, the plugin solves the issue of getting the user to click the initial loading screen so that the browser has the ability to play audio and go fullscreen.
 
@@ -56,7 +56,7 @@ IIf you hate reading and would rather watch a video on how to install and config
 
 ## Adding your images
 
-There are two PNG images that you need to prepare.  Both are recommended to be 1280x720 or smaller.
+There are two PNG images that you need to prepare. Both are recommended to be 1280x720 or smaller.
 
 - The first image needs to be renamed `clickme.png` in lower case.
 - The second image needs to be renamed `loading.png` in lower case.
@@ -66,7 +66,7 @@ This user click is important as it allows the browser to now play audio and allo
 fullscreen mode.
 
 Once the user has clicked the `clickme.png` image, then the image is swapped to the
-`loading.png` image and the progress bar is now shown.  To change the progress bar color see the next section.
+`loading.png` image and the progress bar is now shown. To change the progress bar color see the next section.
 
 Once the loading of the game happens, the Godot Engine will start running your game.
 
@@ -79,7 +79,7 @@ Replace the `clickme.png` and `loading.png` in the `res://addons/easy_web_loader
 ## Modifying colors
 
 This section is slightly advanced as it requires you to modify the included 
-Custom HTML Shell.  If you mess up, don't worry, just re-install this plugin and
+Custom HTML Shell. If you mess up, don't worry, just re-install this plugin and
 you are back to where you started.
 
 The Custom HTML Shell is located here: `res://addons/easy_web_loader/html/index_template.html`
