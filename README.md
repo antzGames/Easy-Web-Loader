@@ -34,6 +34,10 @@ If you need help in exporting your game to the web, see the official Godot [Expo
 - your custom images are recommended to be 1280×720 or smaller.
 - This is the initial release, and it was built for my own game jams. If you find bugs please open an issue.
 
+## Future Functionality
+
+The ability to support animated WEBP/GIFs, or static JPG image files.  This would require new variable placeholders in the Custom HTML Shell. During export, the swapping out the image varaiable paceholders with any image, regardless of type and even can have unique names (currently image names have to be hard coded to `clickme.png` and `loading.png`).
+
 ## Video
 
 If you hate reading and would rather watch a video on how to install and configure this plugin, watch on [YouTube](https://youtu.be/3ZJT7RDXMqU).
