@@ -129,9 +129,9 @@ A demo scene is included in this repository to test if everything works.
 
 This plugin registers a custom `EditorExportPlugin` which extends `EditorPlugin` with Godot's editor.
 
-EditorExportPlugins are automatically invoked whenever the user exports the project. This class has may cool methods. The one I sue is the `_export_begin()` method, which is called at the beginning of the export process.
+EditorExportPlugins are automatically invoked whenever the user exports the project. This class has may cool methods. The one I use is the `_export_begin()` method, which is called at the beginning of the export process.
 
-Inside my plugin's `_export_begin` method, only during `web` exports, the 2 image loader files are copied over to the export directory.  That is basically all this plugin does.
+Inside my plugin's `_export_begin` method, and only during `web` exports, the 2 image loader files are copied over to the export directory. That is basically all this plugin does.  During non `web` exports, like desktop or mobile exports, my plugin does nothing.
 
 ## License
 
