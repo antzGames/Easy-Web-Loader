@@ -42,6 +42,12 @@ The ability to support animated WEBP/GIFs, or static JPG image files.  This woul
 
 If you hate reading and would rather watch a video on how to install and configure this plugin, watch on [YouTube](https://youtu.be/3ZJT7RDXMqU).
 
+## Real Examples
+
+https://antzgames.itch.io/mixamo-to-godot
+
+https://antzgames.itch.io/skeletron2084
+
 ## Installation
 
 - Download this repository as a ZIP file.
