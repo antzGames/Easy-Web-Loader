@@ -1,6 +1,6 @@
 # Easy Web Loader for Godot
 
-<img src="https://github.com/user-attachments/assets/ea90ad51-3a26-4150-97cf-c8c2c1500a17" width="50%" height="50%">
+<img src="https://github.com/user-attachments/assets/ea90ad51-3a26-4150-97cf-c8c2c1500a17">
 
 Easy HTML Web Loader for Godot is a very simple plugin used for your web builds
 which allows you to customize your HTML loading screen, with only 2 images. Here are some highlights:
@@ -55,7 +55,7 @@ https://antzgames.itch.io/skeletron2084
 - Copy the `addons` directory from the extracted ZIP file into your Godot project's `res://` filesystem.
 - Go to `Project > Project Settings > Plugins` and enable the plugin.
 
-<img src="https://github.com/antzGames/Easy-Web-Loader/blob/main/demo/images/install_plugin.jpg" width="50%" height="50%">
+<img src="https://github.com/antzGames/Easy-Web-Loader/blob/main/demo/images/install_plugin.jpg">
 
 ## Setting up Web Export
 
@@ -64,7 +64,7 @@ https://antzgames.itch.io/skeletron2084
 - In the Custom HTML Shell field, add `res://addons/easy_web_loader/html/index_template.html`
 - Export. 
 
-<img src="https://github.com/antzGames/Easy-Web-Loader/blob/main/demo/images/web_export_set_shell.jpg" width="50%" height="50%">
+<img src="https://github.com/antzGames/Easy-Web-Loader/blob/main/demo/images/web_export_set_shell.jpg">
 
 ## Adding your images
 
@@ -86,7 +86,7 @@ Once the loading of the game happens, the Godot Engine will start running your g
 
 Replace the `clickme.png` and `loading.png` in the `res://addons/easy_web_loader/html` folder, as shown below, with your own images, and make sure they have the same name in lower case.
 
-<img src="https://github.com/antzGames/Easy-Web-Loader/blob/main/demo/images/plugin_dir_structure.jpg" width="50%" height="50%">
+<img src="https://github.com/antzGames/Easy-Web-Loader/blob/main/demo/images/plugin_dir_structure.jpg">
 
 ## Modifying colors
 
