@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Easy Web Loader Plugin"
 run/main_scene="uid://dpagkm24moj2h"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+config/features=PackedStringArray("4.5", "GL Compatibility")
 boot_splash/image="uid://cgiou1qe7h2fb"
 config/icon="uid://galeg3jqq2hg"
 
