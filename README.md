@@ -1,5 +1,7 @@
 # Easy Web Loader for Godot
 
+<img src="https://github.com/user-attachments/assets/ea90ad51-3a26-4150-97cf-c8c2c1500a17">
+
 Easy HTML Web Loader for Godot is a very simple plugin used for your web builds
 which allows you to customize your HTML loading screen, with only 2 images. Here are some highlights:
 	
@@ -32,9 +34,19 @@ If you need help in exporting your game to the web, see the official Godot [Expo
 - your custom images are recommended to be 1280×720 or smaller.
 - This is the initial release, and it was built for my own game jams. If you find bugs please open an issue.
 
+## Future Functionality
+
+The ability to support animated WEBP/GIFs, or static JPG image files.  This would require new variable placeholders in the Custom HTML Shell. During export, the swapping out the image varaiable paceholders with any image, regardless of type and even can have unique names (currently image names have to be hard coded to `clickme.png` and `loading.png`).
+
 ## Video
 
 If you hate reading and would rather watch a video on how to install and configure this plugin, watch on [YouTube](https://youtu.be/3ZJT7RDXMqU).
+
+## Real Examples
+
+https://antzgames.itch.io/mixamo-to-godot
+
+https://antzgames.itch.io/skeletron2084
 
 ## Installation
 
@@ -43,7 +55,7 @@ If you hate reading and would rather watch a video on how to install and configu
 - Copy the `addons` directory from the extracted ZIP file into your Godot project's `res://` filesystem.
 - Go to `Project > Project Settings > Plugins` and enable the plugin.
 
-<img src="https://github.com/antzGames/Easy-Web-Loader/blob/main/demo/images/install_plugin.jpg" width="50%" height="50%">
+<img src="https://github.com/antzGames/Easy-Web-Loader/blob/main/demo/images/install_plugin.jpg">
 
 ## Setting up Web Export
 
@@ -52,7 +64,7 @@ If you hate reading and would rather watch a video on how to install and configu
 - In the Custom HTML Shell field, add `res://addons/easy_web_loader/html/index_template.html`
 - Export. 
 
-<img src="https://github.com/antzGames/Easy-Web-Loader/blob/main/demo/images/web_export_set_shell.jpg" width="50%" height="50%">
+<img src="https://github.com/antzGames/Easy-Web-Loader/blob/main/demo/images/web_export_set_shell.jpg">
 
 ## Adding your images
 
@@ -74,7 +86,7 @@ Once the loading of the game happens, the Godot Engine will start running your g
 
 Replace the `clickme.png` and `loading.png` in the `res://addons/easy_web_loader/html` folder, as shown below, with your own images, and make sure they have the same name in lower case.
 
-<img src="https://github.com/antzGames/Easy-Web-Loader/blob/main/demo/images/plugin_dir_structure.jpg" width="50%" height="50%">
+<img src="https://github.com/antzGames/Easy-Web-Loader/blob/main/demo/images/plugin_dir_structure.jpg">
 
 ## Modifying colors
 
@@ -118,6 +130,14 @@ the Custom HTML Shell:
 ## Demo
 
 A demo scene is included in this repository to test if everything works.
+
+## Behind the scenes
+
+This plugin registers a custom `EditorExportPlugin` which extends `EditorPlugin` with Godot's editor.
+
+EditorExportPlugins are automatically invoked whenever the user exports the project. This class has may cool methods. The one I use is the `_export_begin()` method, which is called at the beginning of the export process.
+
+Inside my plugin's `_export_begin` method, and only during `web` exports, the 2 image loader files are copied over to the export directory. That is basically all this plugin does.  During non `web` exports, like desktop or mobile exports, my plugin does nothing.
 
 ## License
 
