@@ -48,6 +48,10 @@ https://antzgames.itch.io/mixamo-to-godot
 
 https://antzgames.itch.io/skeletron2084
 
+https://antzgames.itch.io/little-mage
+
+https://antzgames.itch.io/raid
+
 ## Installation
 
 - Download this repository as a ZIP file.
