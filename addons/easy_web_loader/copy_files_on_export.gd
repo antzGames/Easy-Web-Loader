@@ -4,6 +4,10 @@ extends EditorExportPlugin
 var _path: String = ""
 var _features: PackedStringArray
 
+const html_dir_path = "res://addons/easy_web_loader/html/"
+
+@export_file_path() var click_me_image
+
 func _get_name() -> String:
 	return "Easy Web Export"
 
@@ -61,8 +65,35 @@ func _export_end() -> void:
 
 func _get_image_files() -> Array[CFOEFileSet]:
 	var files: Array[CFOEFileSet]
-	files.append(CFOEFileSet.create("res://addons/easy_web_loader/html/clickme.png","clickme.png", PackedStringArray(["web"])))
-	files.append(CFOEFileSet.create("res://addons/easy_web_loader/html/loading.png","loading.png", PackedStringArray(["web"])))	
+	
+	# Get all files in html directory
+	var dir := DirAccess.open(html_dir_path)
+	if not dir: printerr("Could not open HTML folder: " + html_dir_path); return files
+	
+	dir.list_dir_begin()
+	var html_files := dir.get_files()
+	
+	# Get the mandatory clickme and loading images
+	if html_files.has("clickme.png"):
+		files.append(CFOEFileSet.create(html_dir_path + "clickme.png","clickme.png", PackedStringArray(["web"])))
+		print_rich("Added [color=yellow]clickme.png[/color] to the web export.")
+	else:
+		printerr("clickme.png not found in " + html_dir_path)
+	if html_files.has("loading.png"):
+		files.append(CFOEFileSet.create(html_dir_path + "loading.png","loading.png", PackedStringArray(["web"])))
+		print_rich("Added [color=yellow]loading.png[/color] to the web export.")
+	else:
+		printerr("loading.png not found in " + html_dir_path)
+	
+	for file: String in html_files:
+		# filter out html and .import files 
+		if file.contains("clickme.png"): continue
+		if file.contains("loading.png"): continue
+		if file.contains(".import"): continue
+		if file.contains(".html"): continue
+		files.append(CFOEFileSet.create(html_dir_path + file, file, PackedStringArray(["web"])))
+		print_rich("Added [color=yellow]" + file + "[/color] to the web export.")
+
 	return files
 
 func _push_err(error: String) -> void:

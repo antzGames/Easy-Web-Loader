@@ -3,13 +3,14 @@
 <img src="https://github.com/user-attachments/assets/ea90ad51-3a26-4150-97cf-c8c2c1500a17">
 
 Easy HTML Web Loader for Godot is a very simple plugin used for your web builds
-which allows you to customize your HTML loading screen, with only 2 images. Here are some highlights:
+which allows you to customize your HTML loading screen, with only 2 images, but allows as many images you want. Here are some highlights:
 	
 - includes a custom HTML shell template.
 - forces the user to click so that the browser is allowed to enable audio and fullscreen.
 - loading screen and progress bar show loading progress.
 - progress bar color, and loading screen background color can be modified in the included custom HTML shell template.
 - use your own images to customize the HTML loading process.
+- plugin can export any number of additional files of any type (GIF, BMP, CSS, JSON). Any file format other than HTML (.html) is supported.
 
 ## Why is a plugin needed?
 
@@ -30,13 +31,8 @@ If you need help in exporting your game to the web, see the official Godot [Expo
 
 - only single-threaded exports are supported.
 - only `Export Project` option supported (no PCK/ZIP)
-- your custom images must be in PNG format.
-- your custom images are recommended to be 1280×720 or smaller.
-- This is the initial release, and it was built for my own game jams. If you find bugs please open an issue.
-
-## Future Functionality
-
-The ability to support animated WEBP/GIFs, or static JPG image files.  This would require new variable placeholders in the Custom HTML Shell. During export, the swapping out the image varaiable paceholders with any image, regardless of type and even can have unique names (currently image names have to be hard coded to `clickme.png` and `loading.png`).
+- your 2 mandatory custom images must be in PNG format.  Any number of additional files can also be auto exported. Any number of additional files of any type (GIF, BMP, CSS, JSON) except HTML files.
+- your mandatory custom images are recommended to be 1280×720 or smaller.
 
 ## Video
 
@@ -127,6 +123,34 @@ the Custom HTML Shell:
 	}
 ```
 
+### Additional images supported - Advanced Topic
+
+The plugin will export any additional files in the `res://addons/easy_web_loader/html` folder.
+Any file format other than HTML (.html) is supported.
+
+The Steam Wishlist image is included in this plugin to provide an example on how to add more images to your custom web loading screen.
+The image is `wishlist_on_steam.png`.
+
+You will again meed to modify the included Custom HTML Shell located at: `res://addons/easy_web_loader/html/index_template.html`
+
+The Godot editor hides HTML files for some reason so you need to edit this file using an external editor.
+
+Comment out `<div id="other_images">` section and re-export the project.  This is a basic example, but all you need to do is change the `href` to 
+point to your Steam's wishlist URL and now you have a button that pushes users to your Steam's site.
+
+```html
+	<!-- 	Add other images buttons here - you are resposibly for any HTML/CSS/JS to make it look good and work.
+			This is just an example. Uncomment <div> below to have a simple wishlist button forward to the steam store.
+			Remember all <img> tags will be hidden initially (display:none), so you need to explicitly set them in HTML or JS code.
+	-->
+	<div id="other_images">
+		<a href="https://store.steampowered.com/" target="_blank" rel="noopener noreferrer">
+			<img id="wishlistImage" src="wishlist_on_steam.png" style="width:10%; display:block">
+		</a>
+	</div>
+
+```
+
 ## Demo
 
 A demo scene is included in this repository to test if everything works.
@@ -137,13 +161,13 @@ This plugin registers a custom `EditorExportPlugin` which extends `EditorPlugin`
 
 EditorExportPlugins are automatically invoked whenever the user exports the project. This class has may cool methods. The one I use is the `_export_begin()` method, which is called at the beginning of the export process.
 
-Inside my plugin's `_export_begin` method, and only during `web` exports, the 2 image loader files are copied over to the export directory. That is basically all this plugin does.  During non `web` exports, like desktop or mobile exports, my plugin does nothing.
+Inside my plugin's `_export_begin` method, and only during `web` exports, all the files in the `res://addons/easy_web_loader/html` are copied over to the export directory. That is basically all this plugin does.  During non `web` exports, like desktop or mobile exports, my plugin does nothing.
 
 ## License
 
 MIT License
 
-Copyright (c) 2025 Antz
+Copyright (c) 2026 Antz
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
