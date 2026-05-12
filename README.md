@@ -16,7 +16,7 @@ which allows you to customize your HTML loading screen, with only 2 images, but 
 
 By default, Godot exports all assets (including images) into a PCK file. Therefore, your images will not be available to HTML using a simple `<img>` tag.
 
-So how do you add custom images to support a custom HTML shell? Well you need to copy the loader images over AFTER export. Many custom Godot placeholder variables are processed in the custom HTML shell, which further complicates the simple use case of custom loader images.
+So how do you add custom images to support a custom HTML shell? Well you need to copy the loader images over AFTER export.
 
 This plugin makes this whole process easy and simple. All you need to provide is 2 custom loader images and the plugin handles the copying over of the files and the processing of the provided custom HTML template.
 
@@ -135,7 +135,7 @@ Any file format other than HTML (.html) is supported.
 The Steam Wishlist image is included in this plugin to provide an example on how to add more images to your custom web loading screen.
 The image is `wishlist_on_steam.png`.
 
-You will again meed to modify the included Custom HTML Shell located at: `res://addons/easy_web_loader/html/index_template.html`
+You will again need to modify the included Custom HTML Shell located at: `res://addons/easy_web_loader/html/index_template.html`
 
 The Godot editor hides HTML files for some reason so you need to edit this file using an external editor.
 
